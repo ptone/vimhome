@@ -1,3 +1,4 @@
+" I started my vimrc based on https://github.com/empty/vimrc.git
 set nocompatible
 filetype off
 call pathogen#runtime_append_all_bundles()
