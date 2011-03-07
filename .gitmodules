@@ -25,9 +25,6 @@
 [submodule "bundle/ragtag"]
 	path = bundle/ragtag
 	url = https://github.com/tpope/vim-ragtag.git
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = https://github.com/tpope/vim-ragtag.git
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
@@ -58,3 +55,6 @@
 [submodule "bundle/l9"]
 	path = bundle/l9
 	url = https://github.com/clones/vim-l9.git
+[submodule "bundle/vst"]
+	path = bundle/vst
+	url = https://github.com/vim-scripts/VST
