@@ -58,3 +58,6 @@
 [submodule "bundle/vst"]
 	path = bundle/vst
 	url = https://github.com/vim-scripts/VST
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
