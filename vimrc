@@ -44,8 +44,7 @@ set numberwidth=6
 set undolevels=1000      " use many muchos levels of undo
 
 "Informative status line
-set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]\ Col:%c
-
+set statusline=%F%m%r%h%w%{fugitive#statusline()}\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]\ Col:%c
 
 " Backups
 set backupdir=~/.vim/tmp/backup// " backups
@@ -469,8 +468,9 @@ nnoremap <D-k> k:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S
 nnoremap <D-j> :call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^
 
 " switch process dir to parent of current file
+" ,cd is now used by rooter.vim
 " not sure what the :h part does
-nmap <leader>cd :lcd %:h<CR>
+nmap <leader>cdc :lcd %:h<CR>
 
 " make sure path exists for new file
 :if !exists("pathmaker")
