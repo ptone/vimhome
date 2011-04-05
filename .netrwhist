@@ -1,6 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/preston/Projects/Python/BirdFish Project/BirdFish/docs'
 let g:netrw_dirhist_2='/private/tmp/foo'
 let g:netrw_dirhist_3='/Users/preston/Projects/Python/BirdFish Project/BirdFish'
 let g:netrw_dirhist_4='/Users/preston/Projects/Django/projects/django-la-facebook'
+let g:netrw_dirhist_5='/private/tmp/flask-oauth'
+let g:netrw_dirhist_6='/Users/preston/Projects/Django/projects/django-la-facebook'
+let g:netrw_dirhist_7='/Users/preston/Projects/code/forks/packaginator'
+let g:netrw_dirhist_8='/Users/preston/Projects/code/BirdFish Project/BirdFish/birdfish'
