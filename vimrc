@@ -347,17 +347,25 @@ let NERDSpaceDelims=1
 set tags=tags;/
 
 " toggle taglist window
-nmap <leader>tl :TlistToggle<CR>
+" nmap <leader>tl :TlistToggle<CR>
+nmap <leader>tl :TagbarToggle<CR>
 " update tags
 nmap <leader>tu :!/usr/local/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
 " nmap <leader>tu :!/usr/local/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude='@.ctagsignore' .<cr>
+"
+"
+" C-\ - Open the definition in a new tab
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+" D-] - Open the definition in a vertical split
+map <D-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " select most recently pasted block
 nnoremap gp `[v`]
 
+" SnipMate multisnip error fix:
 " set snippets dir to not conflict with default shipped snippets placed
 " by pathogen
-" let snippets_dir="/Users/preston/.vim/mysnippets/"
+let snippets_dir="/Users/preston/.vim/mysnippets/"
 " not really working
 " call ReloadAllSnippets()
 
@@ -365,15 +373,17 @@ nnoremap gp `[v`]
 map <leader>ft :FufTag<CR>
 map <leader>fb :FufBuffer<CR>
 
+" this line is super handy,but seems to break the taglist plugin
+autocmd FileType python set ft=python.django " For SnipMate
+autocmd FileType html set ft=htmldjango.html " For SnipMate
 " fix snipMate:
 " was never able to get tab to work, so mapped <C-j> in plugin source
 " the next two lines were then not needed
-" source /Users/preston/UNIX/dotfiles/vim/bundle/snipmate/plugin/snipMate.vim
-" source /Users/preston/UNIX/dotfiles/vim/bundle/snipmate/after/plugin/snipMate.vim
-" this line is super handy,but seems to break the taglist plugin
-" autocmd FileType python set ft=python.django " For SnipMate
-autocmd FileType html set ft=htmldjango.html " For SnipMate
+source /Users/preston/UNIX/dotfiles/vim/bundle/snipmate/plugin/snipMate.vim
+source /Users/preston/UNIX/dotfiles/vim/bundle/snipmate/after/plugin/snipMate.vim
+
 " inoremap <C-_> <Space><BS><Esc>:call InsertCloseTag()<cr>a
+
 " pydict location:
 let g:pydiction_location = '/Users/preston/UNIX/dotfiles/vim/util/complete-dict'
 
